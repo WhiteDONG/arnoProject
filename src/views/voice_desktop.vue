@@ -168,7 +168,7 @@ export default {
     
     methods: {
         getDetail(id){
-            if(id=='home'||id == 'F-613'){
+            if(id == 'F-613'){
                 this.pageid = 1
             }if (id == 'Little Bel') {
                 this.pageid = 2

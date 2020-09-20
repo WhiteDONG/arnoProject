@@ -8,7 +8,7 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Index',
-    component: () => import(/* webpackChunkName: "index" */ '../views/index.vue'),
+    component: () => import('../views/index.vue'),
   },
   {
     path: '/about',
@@ -21,78 +21,79 @@ Vue.use(VueRouter)
   {
     path:'/voice_desktop',
     name: 'VoiceDesktop',
-    component: () => import( '../views/voice_desktop/index.vue'),
-    redirect: '/voice_desktop/f613',
-    children: [
-      {
-        path:'f613',
-        name: 'f613',
-        component: () => import( '../views/voice_desktop/f613.vue')
-      },
-      {
-        path:'lightPlace',
-        name: 'LightPlace',
-        component: () => import( '../views/voice_desktop/light_place.vue')
-      },
-      {
-        path:'littleBel',
-        name: 'LittleBel',
-        component: () => import( '../views/voice_desktop/little_bel.vue')
-      }
-    ]
-  },
-  
-  // {
-  //   path: '/about/test1',
-  //   name: 'test1',
-  //   component: Test1,
-  // },
-  // {
-  //   path: '/about/test2',
-  //   name: 'test2',
-  //   component: Test2,
-  // },
-  {
-    path:'/voice_desktop/:id',
-    name: 'VoiceDesktop',
-    // component: VoiceDesktop,
-    component: () => import(/* webpackChunkName: "voice_desktop" */ '../views/voice_desktop.vue'),
+    component: () => import( '../views/home.vue'),
+    redirect: '/voice_desktop/F-613',
+    children: [{
+      path:':id',
+      name: 'voice_desktop',
+      component: () => import(/* webpackChunkName: "voice_desktop" */ '../views/voice_desktop.vue'),
+    }]
   },
   {
-    path:'/voice_ambient/:id',
+    path:'/voice_ambient',
     name: 'VoiceAmbient',
-    // component: VoiceAmbient,
-    component: () => import(/* webpackChunkName: "voice_ambient" */ '../views/voice_ambient.vue'),
+    component: () => import('../views/home.vue'),
+    redirect: '/voice_ambient/Bel',
+    children: [{
+      path:':id',
+      name: 'voice_ambient',
+      component: () => import(/* webpackChunkName: "voice_ambient" */ '../views/voice_ambient.vue'),
+    }]
   },
   {
-    path:'/home_theater/:id',
+    path:'/home_theater',
     name: 'HomeTheater',
-    // component: VoiceAmbient,
-    component: () => import(/* webpackChunkName: "home_theater" */ '../views/home_theater.vue'),
+    component: () => import('../views/home.vue'),
+    redirect: '/home_theater/F-806',
+    children: [{
+      path:':id',
+      name: 'home_theater',
+      component: () => import(/* webpackChunkName: "home_theater" */ '../views/home_theater.vue'),
+    }]
   },
   {
-    path:'/home_recreation/:id',
+    path:'/home_recreation',
     name: 'HomeRecreation',
-    // component: VoiceAmbient,
-    component: () => import(/* webpackChunkName: "home_recreation" */ '../views/home_recreation.vue'),
+    component: () => import('../views/home.vue'),
+    redirect: '/home_recreation/AR1304',
+    children: [{
+      path:':id',
+      name: 'home_recreation',
+      component: () => import(/* webpackChunkName: "home_recreation" */ '../views/home_recreation.vue'),
+    }]
   },
   {
-    path:'/customized/:id',
+    path:'/customized',
     name: 'MajorCustomized',
-    // component: VoiceAmbient,
-    component: () => import(/* webpackChunkName: "major_customized" */ '../views/major_customized.vue'),
+    component: () => import('../views/home.vue'),
+    redirect: '/customized/F612-T4',
+    children: [{
+      path:':id',
+      name: 'customized',
+      component: () => import(/* webpackChunkName: "customized" */ '../views/major_customized.vue'),
+    }]
   },
   {
-    path:'/major/:id',
+    path:'/major',
     name: 'MajorBusiness',
-    // component: VoiceAmbient,
-    component: () => import(/* webpackChunkName: "major_business" */ '../views/major_business.vue'),
+    component: () => import('../views/home.vue'),
+    redirect: '/major/major1',
+    children: [{
+      path:':id',
+      name: 'major',
+      component: () => import(/* webpackChunkName: "customized" */ '../views/major_business.vue'),
+    }]
   },
   {
-    path:'/brand/:id',
+    path:'/brand',
     name: 'Brand',
-    // component: VoiceAmbient,
-    component: () => import(/* webpackChunkName: "brand" */ '../views/brand.vue'),
+    component: () => import('../views/home.vue'),
+    redirect: '/brand/brand1',
+    children: [{
+      path:':id',
+      name: 'brand',
+      component: () => import(/* webpackChunkName: "Brand" */ '../views/brand.vue'),
+    }]
   }
 ]
 
