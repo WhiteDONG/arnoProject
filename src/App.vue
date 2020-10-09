@@ -2,7 +2,10 @@
   <div id="app">
     <div id="nav">
       <ul class="nav-wrap">
-        <router-link to="/" exact><div class="logo-icn">logo-icon</div></router-link>
+        
+        <router-link to="/" exact class="logo-icn">
+          <img class="logo_san" src="./assets/images/sanjiao.png" alt="" srcset="" width="90px" height="60px">
+        </router-link>
        
         <li class="drop-tilte"  style="margin-left: 22px;" >
           <router-link to="/voice_desktop" >桌面音箱</router-link>
@@ -12,13 +15,6 @@
             <dd><router-link to="/voice_desktop/Light Standing" >Light Standing</router-link></dd>
           </dl>
         </li>
-        <!-- <router-link to="/voice_desktop/" tag="li" class="drop-tilte" >桌面音箱
-          <ul class="drop-down">
-            <li><router-link to="/voice_desktop/F-613" >F-613</router-link></li>
-            <li><router-link to="/voice_desktop/Little Bel" >Little Bel</router-link></li>
-            <li><router-link to="/voice_desktop/Light Standing" >Light Standing</router-link></li>
-          </ul>
-        </router-link> -->
         <li class="drop-tilte" >
           <router-link to="/voice_ambient" >环境音箱</router-link>
           <dl class="drop-down">
@@ -69,8 +65,8 @@
           </dl>
         </li>
         <li class="drop-tilte" >
-          <router-link to="/major" >专业定制</router-link>
-          <dl class="drop-down large-drop_down">
+          <router-link to="/major" >专业&商业</router-link>
+          <dl class="drop-down large-drop_down" style="width: 195%;">
             <dd><router-link to="/major/major1">会议厅</router-link></dd>
             <dd><router-link to="/major/major2">音乐厅&剧场</router-link></dd>
             <dd><router-link to="/major/major3">音乐俱乐部</router-link></dd>
@@ -96,10 +92,10 @@
           </dl>
         </li>
         <li class="drop-tilte" >
-          <router-link to="/wares" >商品icon</router-link>
+          <router-link to="/wares" ><img src="./assets/images/shopp.png" alt="" srcset="" width="19px" height="19px" style="vertical-align: middle;"></router-link>
         </li>
         <li class="drop-tilte" >
-          <router-link to="/japan" >日本语</router-link>
+          <a href="http://www.taguchi-craft.jp/">日本语</a>
         </li>
       </ul>
     </div>
@@ -109,16 +105,16 @@
         <div class="extend-link">
           <dl>
             <dt>家用产品</dt>
-            <dd>桌面音箱</dd>
-            <dd>环境音箱</dd>
-            <dd>家庭影院</dd>
-            <dd>家庭娱乐</dd>
+            <dd><router-link to="/voice_desktop" >桌面音箱</router-link></dd>
+            <dd><router-link to="/voice_ambient" >环境音箱</router-link></dd>
+            <dd><router-link to="/home_theater" >家庭影院</router-link></dd>
+            <dd><router-link to="/home_recreation" >家庭娱乐</router-link></dd>
           </dl>
           <dl>
             <dt>专业产品</dt>
-            <dd>背景音箱</dd>
-            <dd>专业定制</dd>
-            <dd>专业音箱</dd>
+            <dd><router-link to="/customized" >背景音箱</router-link></dd>
+            <dd><router-link to="/customized" >专业定制</router-link></dd>
+            <dd><router-link to="/customized" >专业音箱</router-link></dd>
           </dl>
           <dl>
             <dt>产品购买</dt>
@@ -126,10 +122,10 @@
           </dl>
           <dl>
             <dt>关于我们</dt>
-            <dd>品牌介绍</dd>
-            <dd>Taguchi哲学</dd>
-            <dd>Taguchi技术</dd>
-            <dd>联系我们</dd>
+            <dd><router-link to="/brand/brand1">品牌介绍</router-link></dd>
+            <dd><router-link to="/brand/brand2">Taguchi哲学</router-link></dd>
+            <dd><router-link to="/brand/brand3">Taguchi技术</router-link></dd>
+            <dd><router-link to="/brand/brand4">联系我们</router-link></dd>
           </dl>
           <dl>
             <dt>关注我们</dt>
@@ -147,8 +143,8 @@
 
 <style scoped>
 @import "./assets/style/main.css";
-.router-link-active {color: #000000!important;}
-
+.router-link-active{color: #000000;}
+.router-link-active::after{background: #000000!important;}
 </style>
 
 <script>
@@ -160,7 +156,11 @@ export default {
       }
     },
     mounted(){
-      document.getElementsByTagName('body')[0].scrollTop = 0
+      document.getElementsByTagName('body')[0].scrollTop = 0;
+      window.onscroll=function(){
+        var sl=-Math.max(document.body.scrollLeft,document.documentElement.scrollLeft);
+        document.getElementById('nav').style.left=sl+'px';
+      }
     },
     methods: {
       routerFresh() {
@@ -172,5 +172,6 @@ export default {
       getMethod(){
       }
     }
+    
 }
 </script>

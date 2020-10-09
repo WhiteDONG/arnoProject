@@ -2,6 +2,7 @@
     <div id="index">
         <div class="swiper-container" >
             <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="../assets/images/banner1.jpg" alt="" srcset=""></div>
               <div class="swiper-slide"><img src="../assets/images/banner2.png" alt="" srcset=""></div>
               <div class="swiper-slide"><img src="../assets/images/banner3.png" alt="" srcset=""></div>
               <div class="swiper-slide"><img src="../assets/images/banner4.png" alt="" srcset=""></div>
@@ -36,11 +37,11 @@
                             </div>
                             <a href="http://##">购买 ></a>
                         </div>
-                        <img src="../assets/images/index1.png" alt="" width="567px" height="470px">
+                        <img src="../assets/images/index2.jpg" alt="" width="567px" height="470px">
                     </div>
                     <div class="main-list">
                         <div class="main-list_column">
-                            <img src="../assets/images/index1.png" alt="" width="567px" height="470px" >
+                            <img src="../assets/images/index3.jpg" alt="" width="567px" height="470px" >
                             <div class="synopsis-warp">
                                 <p class="synopsis-title pb30">家庭影院</p>
                                 <div class="synopsis-describe pb30">采用专业影剧院的 Arched Array Flat Speaker System技术,带来更高水平的视听享受,让人完全沉漫在戏中</div>
@@ -53,7 +54,7 @@
                             </div>
                         </div>
                         <div class="main-list_column">
-                            <img src="../assets/images/index1.png" alt="" width="567px" height="470px" >
+                            <img src="../assets/images/index4.jpg" alt="" width="567px" height="470px" >
                             <div class="synopsis-warp">
                                 <p class="synopsis-title pb30">家庭娱乐</p>
                                 <div class="synopsis-describe pb30">除了 H-END 级别的音乐欣赏以外,也非常适用于卡拉 OK 演唱、家庭影院、小型演奏会等等</div>
@@ -67,7 +68,7 @@
                         </div>
                     </div>
                     <div class="main-list">
-                        <img src="../assets/images/index1.png" alt="" width="567px" height="470px">
+                        <img src="../assets/images/index5.jpg" alt="" width="567px" height="470px">
                         <div class="synopsis-warp synopsis-warp_right">
                             <p class="synopsis-title pb30">专业定制</p>
                             <div class="synopsis-describe pb30">Taguchi-一直专注于专业音响领域,尤其擅长为客户不同需求定制各类大小型音响系统</div>
@@ -82,20 +83,20 @@
                     <div class="main-case">
                         <h3>经典案例</h3>
                         <div class="main-case_list">
-                            <div class="case-content"><div class="case-content_tilte">会议厅</div></div>
-                            <div class="case-content"><div class="case-content_tilte">音乐厅&剧场</div></div>
-                            <div class="case-content"><div class="case-content_tilte">音乐俱乐部</div></div>
-                            <div class="case-content"><div class="case-content_tilte">咖啡厅&餐吧</div></div>
-                            <div class="case-content reset-mr"><div class="case-content_tilte">音乐空间&建筑</div></div>
-                            <div class="case-content"><div class="case-content_tilte">电影院</div></div>
-                            <div class="case-content"><div class="case-content_tilte">时尚品牌店</div></div>
-                            <div class="case-content"><div class="case-content_tilte">美术馆&博物馆</div></div>
-                            <div class="case-content"><div class="case-content_tilte">寺院&禅意空间</div></div>
-                            <div class="case-content reset-mr"><div class="case-content_tilte">体育场&公共设施</div></div>
-                            <div class="case-content"><div class="case-content_tilte">艺术展&演出活动</div></div>
-                            <div class="case-content"><div class="case-content_tilte">科研装置</div></div>
-                            <div class="case-content"><div class="case-content_tilte">酒店&商厦</div></div>
-                            <a href="http://##" class="case-link">进一步了解更多 ></a>
+                            <router-link to="/major/major1"><div class="case-content case-content1"><div class="case-content_tilte">会议厅</div></div></router-link>
+                            <router-link to="/major/major2"><div class="case-content case-content2"><div class="case-content_tilte">音乐厅&剧场</div></div></router-link>
+                            <router-link to="/major/major3"><div class="case-content case-content3"><div class="case-content_tilte">音乐俱乐部</div></div></router-link>
+                            <router-link to="/major/major4"><div class="case-content case-content4"><div class="case-content_tilte">咖啡厅&餐吧</div></div></router-link>
+                            <router-link to="/major/major5"><div class="case-content reset-mr case-content5"><div class="case-content_tilte">音乐空间&建筑</div></div></router-link>
+                            <router-link to="/major/major6"><div class="case-content case-content6"><div class="case-content_tilte">电影院</div></div></router-link>
+                            <router-link to="/major/major7"><div class="case-content case-content7"><div class="case-content_tilte">时尚品牌店</div></div></router-link>
+                            <router-link to="/major/major8"><div class="case-content case-content8"><div class="case-content_tilte">美术馆&博物馆</div></div></router-link>
+                            <router-link to="/major/major9"><div class="case-content case-content9"><div class="case-content_tilte">寺院&禅意空间</div></div></router-link>
+                            <router-link to="/major/major10"><div class="case-content reset-mr case-content10"><div class="case-content_tilte">体育场&公共设施</div></div></router-link>
+                            <router-link to="/major/major11"><div class="case-content case-content11"><div class="case-content_tilte">艺术展&演出活动</div></div></router-link>
+                            <router-link to="/major/major12"><div class="case-content case-content12"><div class="case-content_tilte">科研装置</div></div></router-link>
+                            <router-link to="/major/major13"><div class="case-content case-content13"><div class="case-content_tilte">酒店&商厦</div></div></router-link>
+                            <router-link to="/major/major1" class="case-link">进一步了解更多 ></router-link>
                         </div>
                     </div>
                 </div>
